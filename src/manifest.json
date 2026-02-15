@@ -1,6 +1,6 @@
 {
 	"manifest_version": 1,
-	"id": "FiRiter.Joplin",
+	"id": "github.firiter.joplin",
 	"app_min_version": "3.5",
 	"version": "1.0.0",
 	"name": "FiRiter",
@@ -10,7 +10,5 @@
 	"repository_url": "https://github.com/andronicus-bartonius/joplin-plugin-firiter",
 	"keywords": ["writing", "screenwriting", "ai", "llm", "storyboard", "knowledge-graph", "creative-writing", "rag"],
 	"categories": ["productivity", "editor"],
-	"screenshots": [],
-	"icons": {},
-	"promo_tile": {}
+	"screenshots": []
 }
