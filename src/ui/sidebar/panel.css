@@ -1,0 +1,244 @@
+:root {
+	--bg-primary: #1e1e2e;
+	--bg-secondary: #313244;
+	--bg-hover: #45475a;
+	--text-primary: #cdd6f4;
+	--text-secondary: #a6adc8;
+	--text-muted: #6c7086;
+	--accent: #89b4fa;
+	--accent-hover: #74c7ec;
+	--border: #45475a;
+	--success: #a6e3a1;
+	--warning: #f9e2af;
+	--error: #f38ba8;
+	--card-character: #f5c2e7;
+	--card-location: #89b4fa;
+	--card-rule: #f9e2af;
+	--card-item: #a6e3a1;
+	--card-arc: #cba6f7;
+	--card-relationship: #f38ba8;
+	--card-beat: #fab387;
+	--card-event: #94e2d5;
+	--card-thread: #74c7ec;
+}
+
+/* Light theme overrides - applied when Joplin uses light mode */
+body.light-theme {
+	--bg-primary: #eff1f5;
+	--bg-secondary: #e6e9ef;
+	--bg-hover: #ccd0da;
+	--text-primary: #4c4f69;
+	--text-secondary: #5c5f77;
+	--text-muted: #9ca0b0;
+	--accent: #1e66f5;
+	--accent-hover: #209fb5;
+	--border: #ccd0da;
+	--success: #40a02b;
+	--warning: #df8e1d;
+	--error: #d20f39;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+	font-size: 13px;
+	background: var(--bg-primary);
+	color: var(--text-primary);
+	line-height: 1.5;
+	overflow-x: hidden;
+}
+
+/* ---- Sidebar Layout ---- */
+.sidebar-container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	padding: 8px;
+	gap: 8px;
+}
+
+/* ---- Header ---- */
+.sidebar-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 4px 0;
+	border-bottom: 1px solid var(--border);
+	padding-bottom: 8px;
+}
+
+.sidebar-header h1 {
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+}
+
+.sidebar-header .project-badge {
+	font-size: 11px;
+	color: var(--text-muted);
+	background: var(--bg-secondary);
+	padding: 2px 6px;
+	border-radius: 4px;
+}
+
+/* ---- Section ---- */
+.sidebar-section {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.sidebar-section-title {
+	font-size: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: var(--text-muted);
+	padding: 4px 0;
+}
+
+/* ---- Buttons ---- */
+.btn {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 6px 10px;
+	border: none;
+	border-radius: 6px;
+	background: var(--bg-secondary);
+	color: var(--text-primary);
+	font-size: 12px;
+	cursor: pointer;
+	transition: background 0.15s ease;
+	text-align: left;
+	width: 100%;
+}
+
+.btn:hover {
+	background: var(--bg-hover);
+}
+
+.btn-accent {
+	background: var(--accent);
+	color: var(--bg-primary);
+	font-weight: 600;
+}
+
+.btn-accent:hover {
+	background: var(--accent-hover);
+}
+
+.btn-sm {
+	padding: 4px 8px;
+	font-size: 11px;
+}
+
+/* ---- Status indicator ---- */
+.status-dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	flex-shrink: 0;
+}
+
+.status-dot.connected { background: var(--success); }
+.status-dot.disconnected { background: var(--error); }
+.status-dot.unknown { background: var(--text-muted); }
+
+/* ---- Pinned cards list ---- */
+.pinned-cards {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	max-height: 200px;
+	overflow-y: auto;
+}
+
+.pinned-card {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 4px 8px;
+	border-radius: 4px;
+	background: var(--bg-secondary);
+	font-size: 11px;
+	cursor: pointer;
+}
+
+.pinned-card:hover {
+	background: var(--bg-hover);
+}
+
+.card-type-badge {
+	font-size: 9px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 1px 4px;
+	border-radius: 3px;
+	color: var(--bg-primary);
+}
+
+.card-type-badge.Character { background: var(--card-character); }
+.card-type-badge.Location { background: var(--card-location); }
+.card-type-badge.Rule { background: var(--card-rule); }
+.card-type-badge.Item { background: var(--card-item); }
+.card-type-badge.Arc { background: var(--card-arc); }
+.card-type-badge.Relationship { background: var(--card-relationship); }
+.card-type-badge.Beat { background: var(--card-beat); }
+.card-type-badge.Event { background: var(--card-event); }
+.card-type-badge.Thread { background: var(--card-thread); }
+
+/* ---- Empty state ---- */
+.empty-state {
+	text-align: center;
+	padding: 16px 8px;
+	color: var(--text-muted);
+	font-size: 11px;
+}
+
+/* ---- Workflow status ---- */
+.workflow-status {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 6px 8px;
+	border-radius: 6px;
+	background: var(--bg-secondary);
+	font-size: 11px;
+}
+
+.workflow-status .spinner {
+	width: 12px;
+	height: 12px;
+	border: 2px solid var(--text-muted);
+	border-top-color: var(--accent);
+	border-radius: 50%;
+	animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+	to { transform: rotate(360deg); }
+}
+
+/* ---- Scrollbar styling ---- */
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--border);
+	border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--text-muted);
+}

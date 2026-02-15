@@ -1,0 +1,7 @@
+{
+	"extraScripts": [],
+	"webviewScripts": [
+		"ui/storyboard/storyboard.tsx",
+		"ui/output-review/output-review.tsx"
+	]
+}

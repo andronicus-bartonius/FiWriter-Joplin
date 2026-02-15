@@ -1,0 +1,39 @@
+# Build outputs
+dist/
+publish/
+*.jpl
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS files
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+
+# Temporary files
+*.tmp
+.cache/
+.temp/
+
+# Plugin development
+.joplin-plugin-dev/

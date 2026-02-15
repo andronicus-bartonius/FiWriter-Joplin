@@ -1,0 +1,16 @@
+{
+	"manifest_version": 1,
+	"id": "FiRiter.Joplin",
+	"app_min_version": "3.5",
+	"version": "1.0.0",
+	"name": "FiRiter",
+	"description": "An AI-powered screenwriting copilot for Joplin that combines structured storyboarding and intelligent drafting workflows. The plugin provides editable Knowledge Graph boards for canon, arcs, and episode beats, alongside retrieval-augmented generation to maintain voice, continuity, and world rules. Writers can plan, draft, revise, and enforce story consistency through guided work modes while using any local or cloud LLM as the inference engine.",
+	"author": "andronicus-bartonius",
+	"homepage_url": "https://github.com/andronicus-bartonius/joplin-plugin-firiter",
+	"repository_url": "https://github.com/andronicus-bartonius/joplin-plugin-firiter",
+	"keywords": ["writing", "screenwriting", "ai", "llm", "storyboard", "knowledge-graph", "creative-writing", "rag"],
+	"categories": ["productivity", "editor"],
+	"screenshots": [],
+	"icons": {},
+	"promo_tile": {}
+}
